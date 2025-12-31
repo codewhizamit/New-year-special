@@ -328,10 +328,7 @@ img{
   <p style="font-size:22px;margin-top:15px;">
     I love you ❤️
   </p>
-
-  <audio id="loveSong" loop>
-    <source src="romantic-song.mp3" type="audio/mp3">
-  </audio>
+  
 </div>
 
 
@@ -417,14 +414,9 @@ function startSlideshow(){
 
 function yesLove(){
   go('yesPage');
-
-  const song = document.getElementById('loveSong');
-  if(song){
-    song.volume = 0.7;
-    song.play().catch(()=>{});
-  }
 }
 </script>
 
 </body>
 </html>
+
