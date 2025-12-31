@@ -11,20 +11,16 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  min-height:100vh;
+  height:100vh;
   background:linear-gradient(180deg,#1b0036,#3a0ca3,#7209b7);
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow-y:auto;
-  overflow-x:hidden;
+  overflow:auto;
   font-family:'Poppins',sans-serif;
 }
 
 .page{
-  max-height:100%;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
   display:none;
   text-align:center;
   padding:30px;
@@ -65,7 +61,7 @@ button:hover{
 }
 
 img{
-  max-width:240px;
+  max-width:190px;
   border-radius:20px;
   margin:15px;
   box-shadow:0 0 35px rgba(255,255,255,.25);
@@ -168,7 +164,7 @@ img{
   <h1>It still surprises me…</h1>
   <p>
     We’ve never met face to face,<br>
-    yet you don’t feel like a stranger.<br><br>
+    yet you don’t feel like a stranger.<br>
     Through simple texts and quiet calls,<br>
     something real slowly found its way.
   </p>
@@ -203,9 +199,9 @@ img{
 <div class="page" id="p6">
   <h1>This is for you 🎁</h1>
   <div id="giftArea">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmF6cG9ldHU5dmJoZzRrOHdtNXFpYXgzaHQ1OHN6a3lrdDVmMXlqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MaCVNTpSdFJYO81i7v/giphy.gif">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGdldGp5YzdneGY1NDlkNjA2M3IxajI1d3JpYXN6MjMxcnV5MDQzMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/4xYvEkO8KerN3zNvbG/giphy.gif">
-    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3enp3Z3J3aTd5NmxtNXN1azEwM3ZlcXpydzF1aGg2ejh5NHNvZ3BnaSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/4EiinCGfkg2TZuencQ/giphy.gif">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmF6cG9ldHU5dmJoZzRrOHdtNXFpYXgzaHQ1OHN6a3lrdDVmMXlqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MaCVNTpSdFJYO81i7v/giphy.gif" style="max-width:100px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGdldGp5YzdneGY1NDlkNjA2M3IxajI1d3JpYXN6MjMxcnV5MDQzMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/4xYvEkO8KerN3zNvbG/giphy.gif" style="max-width:100px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3enp3Z3J3aTd5NmxtNXN1azEwM3ZlcXpydzF1aGg2ejh5NHNvZ3BnaSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/4EiinCGfkg2TZuencQ/giphy.gif" style="max-width:100px;">
   </div>
   <p id="giftText">Because your health matters to me.</p>
 </div>
@@ -214,12 +210,10 @@ img{
   <h1>Happy New Year 🎆</h1>
   <p>
     I don’t know what this year has planned for us…<br>
-    but I know one thing for sure.<br><br>
-
+    but I know one thing for sure.<br>
     Somewhere between calls, chats,<br>
     and those little conversations,<br>
-    you became someone I truly care about. 🌸💗<br><br>
-
+    you became someone I truly care about. 🌸💗<br>
     This year, I wish you peace on hard days,<br>
     smiles that come naturally,<br>
     and moments where you quietly realize<br>
@@ -298,12 +292,10 @@ img{
 <div class="page" id="p11">
   <h1>I don’t want to rush this…</h1>
   <p>
-    I just want to be honest with you.<br><br>
-
+    I just want to be honest with you.<br>
     Somewhere between these moments,<br>
     your smile, your presence,<br>
-    you slowly became important to me.<br><br>
-
+    you slowly became important to me.<br>
     I’m not asking for promises.<br>
     Not perfection.<br><br>
 
@@ -382,10 +374,9 @@ function autoGift(){
 
   setTimeout(()=>{
     document.getElementById('giftArea').innerHTML=`
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzNyeHY1bjJ5b3Nwa2d4NW5kajhsd2U2ZGQ2bHp2ejN2MHlqOTl1eSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/3IZ22n7Tkh117XDKs0/giphy.gif">
-    <img src="https://media.tenor.com/5hNFjHWQYKQAAAAm/bubu-dudu-sseeyall.webp">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTQ1cGoxMjEwc2hhYWpvb2JnbHozYW5taTIxd3JrcWVhZmx4MzljZSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQVBjPi083DBlGBl7K/giphy.gif">
-
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzNyeHY1bjJ5b3Nwa2d4NW5kajhsd2U2ZGQ2bHp2ejN2MHlqOTl1eSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/3IZ22n7Tkh117XDKs0/giphy.gif" style="max-width:100px;">
+    <img src="https://media.tenor.com/5hNFjHWQYKQAAAAm/bubu-dudu-sseeyall.webp" style="max-width:100px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTQ1cGoxMjEwc2hhYWpvb2JnbHozYW5taTIxd3JrcWVhZmx4MzljZSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQVBjPi083DBlGBl7K/giphy.gif" style="max-width:150px;">
     `;
     document.getElementById('giftText').innerText="This is what I really want to give you 💖";
   },12000);
@@ -436,5 +427,4 @@ function yesLove(){
 </script>
 
 </body>
-
 </html>
