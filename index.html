@@ -11,16 +11,20 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  height:100vh;
+  min-height:100vh;
   background:linear-gradient(180deg,#1b0036,#3a0ca3,#7209b7);
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
+  overflow-y:auto;
+  overflow-x:hidden;
   font-family:'Poppins',sans-serif;
 }
 
 .page{
+  max-height:100%;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
   display:none;
   text-align:center;
   padding:30px;
@@ -432,4 +436,5 @@ function yesLove(){
 </script>
 
 </body>
+
 </html>
