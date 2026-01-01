@@ -71,7 +71,7 @@ img{
 .hearts{
   position:fixed;
   inset:0;
-  background:url("https://i.imgur.com/YKY28eT.png");
+  background:url("image.png");
   opacity:.12;
   animation:float 60s linear infinite;
   pointer-events:none;
@@ -85,17 +85,61 @@ img{
 .confetti{
   position:fixed;
   inset:0;
-  background:url("https://i.imgur.com/5Z6xK6B.png");
-  animation:confetti 7s linear infinite;
-}
-@keyframes confetti{
-  from{background-position:0 0}
-  to{background-position:0 2400px}
+  pointer-events:none;
+  z-index:10;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,143,171,.18), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(255,77,109,.15), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,200,221,.18), transparent 45%);
+  animation:softPulse 8s ease-in-out infinite;
 }
 
-@keyframes fade{
-  from{opacity:0;transform:scale(.92)}
-  to{opacity:1;transform:scale(1)}
+/* floating hearts */
+.confetti::before{
+  content:"💗 💖 💕 💞 💓";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-10%;
+  text-align:center;
+  font-size:22px;
+  letter-spacing:80px;
+  opacity:.55;
+  animation:heartsFall 14s linear infinite;
+}
+
+.confetti::after{
+  content:"💓 💞 💕 💖 💗";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-30%;
+  text-align:center;
+  font-size:18px;
+  letter-spacing:120px;
+  opacity:.35;
+  animation:heartsFall 20s linear infinite;
+}
+
+/* slow falling motion */
+@keyframes heartsFall{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(140vh);
+  }
+}
+
+/* breathing light */
+@keyframes softPulse{
+  0%,100%{
+    filter:brightness(1);
+  }
+  50%{
+    filter:brightness(1.12);
+  }
 }
 
 /* 💖 EMOTIONAL SLIDESHOW */
@@ -328,7 +372,10 @@ img{
   <p style="font-size:22px;margin-top:15px;">
     I love you ❤️
   </p>
-  
+
+  <audio id="loveSong" loop>
+    <source src="romantic-song.mp3" type="audio/mp3">
+  </audio>
 </div>
 
 
@@ -414,9 +461,14 @@ function startSlideshow(){
 
 function yesLove(){
   go('yesPage');
+
+  const song = document.getElementById('loveSong');
+  if(song){
+    song.volume = 0.7;
+    song.play().catch(()=>{});
+  }
 }
 </script>
 
 </body>
 </html>
-
